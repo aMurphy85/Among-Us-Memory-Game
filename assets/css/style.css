@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #FFDE2A;
+}
+
+.grid {
+    height: 640px;
+    width: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: calc(33.333% - 10px);
+    width: calc(25% - 10px);
+    margin: 3px;
+    position: relative;
+}
+
+.cardFront,
+.cardBack {
+    height: 100%;
+    width: 100%;
+    border: 3px solid #000;
+    padding: 0;
+    position: absolute;
+}
+/*
+img {
+    width: 100px;
+}*/
