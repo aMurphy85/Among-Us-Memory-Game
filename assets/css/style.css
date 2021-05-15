@@ -15,23 +15,39 @@ body {
 }
 
 .grid {
-    height: 860px;
-    width: 860px;
     margin: auto;
+    perspective: 1000px;
     /*display: flex;
     flex-wrap: wrap;*/
 }
 
-.card {
-    height: 150px;
-    width: 150px;
+.d-inline {
+    background-color: black;
+}
+
+.gameCard {
+    height: 160px;
+    width: 140px;
     margin: 3px;
     position: relative;
+    object-fit: fill;
+    transform-style: preserve-3d;
+    transform: scale(1);
+}
+
+.gameCard:active {
+    transform: scale(.98);
+    transition: transform .1s;
+}
+
+.gameCard.flip {
+    transform: rotateY(180deg);
 }
 
 .cardFront,
 .cardBack {
-    border: 3px solid #000;
+    border: 2px solid black;
+    border-radius: 6px;
     height: 100%;
     width: 100%;    
     padding: 0;
