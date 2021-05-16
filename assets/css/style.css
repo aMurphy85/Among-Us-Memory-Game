@@ -17,6 +17,7 @@ body {
     border: chartreuse;
     margin: 15px auto;
     padding: -5px;
+    perspective: 1000px;
 }
 
 .gameCard {    
@@ -25,6 +26,7 @@ body {
     padding: 0;
     position: relative;
     transform-style: preserve-3d;
+    transition: transform 1.5s;
     transform: scale(1);
 }
 
@@ -33,30 +35,38 @@ body {
     transition: transform .1s;
 }
 
-.gameCard.flipCard {
+.gameCard.flip {
     transform: rotateY(180deg);
 }
 
 .cardFront,
 .cardBack {
+    backface-visibility: hidden;
+    border: 3px solid #75FFFF;
+    border-radius: 10px;
+    color: white;
     position: absolute;
+    text-align: center;
 }
 
 .cardFront {
-    background-color: chartreuse;
-    border: 3px solid cyan;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-}
-
-.cardBack {
-    background-color: #000;
-    border: 3px solid red;
+    background-color: #f8f8ff;
     height: 100%;
     width: 100%;
     margin: auto;
     transform: rotateY(180deg);
+}
+
+.cardBack {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+img {
+    height: 100%;
+    width: 100%;
 }
 
 /* Media Queries */
