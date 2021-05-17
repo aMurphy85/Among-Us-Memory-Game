@@ -1,38 +1,37 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #FFDE2A;
+  height: 100vh;
+  display: flex;
+  background: #FFDE2A;
 }
 
-.col {
-    max-height: 140px;
-    max-width: 150px;
-}
-
-.gameGrid {
-    border: chartreuse;
-    margin: 15px auto;
-    padding: -5px;
+.gameArea {
+    height: 645px;
+    width: 620px;    
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
     perspective: 1000px;
 }
 
-.gameCard {    
+.gameCard {
+    width: 145px;
     height: 150px;
     margin: 5px;
-    padding: 0;
     position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1.5s;
     transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
 .gameCard:active {
-    transform: scale(.98);
-    transition: transform .1s;
+    transform: scale(0.97);
+    transition: transform .2s;
 }
 
 .gameCard.flip {
@@ -41,39 +40,23 @@ body {
 
 .cardFront,
 .cardBack {
-    backface-visibility: hidden;
     border: 3px solid #75FFFF;
-    border-radius: 10px;
-    color: white;
-    position: absolute;
-    text-align: center;
+    border-radius:10px;
+    width: 140px;
+    height: 150px;
+    padding: 0;
+    position: absolute;    
+    backface-visibility: hidden;
 }
 
 .cardFront {
     background-color: #f8f8ff;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    transform: rotateY(180deg);
 }
 
 .cardBack {
     background-color: #000;
-    height: 100%;
-    width: 100%;
-    margin: auto;
 }
 
-img {
-    height: 100%;
-    width: 100%;
-}
-
-/* Media Queries */
-
-@media (max-width: 576px) {
-    .col {
-        max-height: 120px;
-        max-width: 120px;
-    }
+.cardFront {
+  transform: rotateY(180deg);
 }
