@@ -1,45 +1,52 @@
-const card = document.querySelectorAll(".gameCard")
+const card = document.querySelectorAll('.gameCard');
 
+// Creating variables for mempry game
 let flippedCard = false;
+let lockCardFlips = false;
 let firstCard, secondCard;
 
-// Creating a flipcard function
-function flipCard() {
+function flipCard () {
+    if (lockCardFlips) return;
 
-    this.classList.toggle('flip');
+    this.classList.add('flip');
 
-    if(!flippedCard) {
+    
+    if (!flippedCard) {
         flippedCard = true;
         firstCard = this;
+     
     } else {
         flippedCard = false;
         secondCard = this;
 
         cardMatch();
-    }    
+    }
 }
 
 function cardMatch() {
-    if(firstCard.dataset.image === secondCard.dataset.image) {
-            cardsMatch();
-        } else {
-            resetCards();
-        }
+    if (firstCard.dataset.image === secondCard.dataset.image) {
+            
+        stopCards();
+    } else {
+
+        resetCards()                            ;
 }
 
-function cardsMatch() {
+function stopCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
 }
 
 function resetCards() {
+    lockCardFlips = true;
+
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-    }, 1200);
+
+        lockCardFlips = false;
+        }, 1500);
+    }
 }
 
-   // console.log("function worked!");
-
-
-card.forEach(card => card.addEventListener('click',flipCard));
+card.forEach(card => card.addEventListener('click', flipCard));
