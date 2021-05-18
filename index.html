@@ -4,91 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
 </head>
 <body>
-    <!-- Webpage page heading 
+    <!-- Webpage page heading -->
     <div class="container-fluid">
-        <h1>Among us memory game</h1>
-    </div>
-    -->
-
-    <!-- Game area / cards -->
-    <div class=" conatiner gameArea">
-        <div class="gameCard" data-image="brownCrewmate">
-            <img class="cardFront" src="./assets/img/brownCrewmate.png" alt="Brown crewmate wiring" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-        <div class="gameCard" data-image="brownCrewmate">
-            <img class="cardFront" src="./assets/img/brownCrewmate.png" alt="Brown crewmate wiring" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-
-        <div class="gameCard" data-image="purpleCrewmate">
-            <img class="cardFront" src="./assets/img/deadCrewmate.png" alt="Purple crewmate laying dead on the floor" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-        <div class="gameCard" data-image="purpleCrewmate">
-            <img class="cardFront" src="./assets/img/deadCrewmate.png" alt="Purple crewmate laying dead on the floor" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-
-        <div class="gameCard" data-image="greenCrewmate">
-            <img class="cardFront" src="./assets/img/greenCrewmate.png" alt="Green crewmate running" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-        <div class="gameCard" data-image="greenCrewmate">
-            <img class="cardFront" src="./assets/img/greenCrewmate.png" alt="Green crewmate running" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-
-        <div class="gameCard" data-image="limeCrewmate">
-            <img class="cardFront" src="./assets/img/limeCrewmate.png" alt="Lime crewmate swiping card" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-        <div class="gameCard" data-image="limeCrewmate">
-            <img class="cardFront" src="./assets/img/limeCrewmate.png" alt="lime crewmate swiping card" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-
-        <div class="gameCard" data-image="orangeCrewmate">
-            <img class="cardFront" src="./assets/img/orangeCrewmate.png" alt="Orange crewmate pressing large red button" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-        <div class="gameCard" data-image="orangeCrewmate">
-            <img class="cardFront" src="./assets/img/orangeCrewmate.png" alt="Orange crewmate pressing large red button" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-
-        <div class="gameCard" data-image="pinkCrewmate">
-            <img class="cardFront" src="./assets/img/pinkCrewmate.png" alt="Pink crewmate with flower hat" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-        <div class="gameCard" data-image="pinkCrewmate">
-            <img class="cardFront" src="./assets/img/pinkCrewmate.png" alt="Pink crewmate with flower hat" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-
-        <div class="gameCard" data-image="redCrewmate">
-            <img class="cardFront" src="./assets/img/redCrewmate.png" alt="Red crewmate about to jump into air vent" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-        <div class="gameCard" data-image="redCrewmate">
-            <img class="cardFront" src="./assets/img/redCrewmate.png" alt="Red crewmate about to jump into air vent" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-
-        <div class="gameCard" data-image="tealCrewmate">
-            <img class="cardFront" src="./assets/img/tealCrewmate.png" alt="Teal crewmate with a caution sign on head" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
-        </div>
-        <div class="gameCard" data-image="tealCrewmate">
-            <img class="cardFront" src="./assets/img/tealCrewmate.png" alt="Teal crewmate with a caution sign on head" />
-            <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-10 col-sm-10 header">
+                <img src="./assets/img/AmongUsHeader.png" alt="Among Us game title with crewmates lining up beneath text">       
+            </div>
         </div>
     </div>
+    
+
+    <!-- Game timer and click counter -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-2 col-md-3 col-sm-3 results">
+                <span class="timer">Time: <br> 00:00</span>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 results">
+                <span class="clicks">Clicks: <br> 0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game area / cards -->        
+    <div class="conatiner">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-10 col-sm-10 justify-content-center gameArea">        
+                <div class="justify-content-center gameCard" data-image="brownCrewmate">
+                    <img class="cardFront" src="./assets/img/brownCrewmate.png" alt="Brown crewmate wiring" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+                <div class="justify-content-center gameCard" data-image="brownCrewmate">
+                    <img class="cardFront" src="./assets/img/brownCrewmate.png" alt="Brown crewmate wiring" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+
+                <div class="justify-content-center gameCard" data-image="purpleCrewmate">
+                    <img class="cardFront" src="./assets/img/deadCrewmate.png" alt="Purple crewmate laying dead on the floor" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+                <div class="justify-content-center gameCard" data-image="purpleCrewmate">
+                    <img class="cardFront" src="./assets/img/deadCrewmate.png" alt="Purple crewmate laying dead on the floor" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+
+                <div class="gameCard" data-image="greenCrewmate">
+                    <img class="cardFront" src="./assets/img/greenCrewmate.png" alt="Green crewmate running" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+                <div class="gameCard" data-image="greenCrewmate">
+                    <img class="cardFront" src="./assets/img/greenCrewmate.png" alt="Green crewmate running" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+
+                <div class="gameCard" data-image="limeCrewmate">
+                    <img class="cardFront" src="./assets/img/limeCrewmate.png" alt="Lime crewmate swiping card" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+                <div class="gameCard" data-image="limeCrewmate">
+                    <img class="cardFront" src="./assets/img/limeCrewmate.png" alt="lime crewmate swiping card" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+
+                <div class="gameCard" data-image="orangeCrewmate">
+                    <img class="cardFront" src="./assets/img/orangeCrewmate.png" alt="Orange crewmate pressing large red button" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+                <div class="gameCard" data-image="orangeCrewmate">
+                    <img class="cardFront" src="./assets/img/orangeCrewmate.png" alt="Orange crewmate pressing large red button" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+
+                <div class="gameCard" data-image="pinkCrewmate">
+                    <img class="cardFront" src="./assets/img/pinkCrewmate.png" alt="Pink crewmate with flower hat" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+                <div class="gameCard" data-image="pinkCrewmate">
+                    <img class="cardFront" src="./assets/img/pinkCrewmate.png" alt="Pink crewmate with flower hat" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+
+                <div class="gameCard" data-image="redCrewmate">
+                    <img class="cardFront" src="./assets/img/redCrewmate.png" alt="Red crewmate about to jump into air vent" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+                <div class="gameCard" data-image="redCrewmate">
+                    <img class="cardFront" src="./assets/img/redCrewmate.png" alt="Red crewmate about to jump into air vent" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+
+                <div class="gameCard" data-image="tealCrewmate">
+                    <img class="cardFront" src="./assets/img/tealCrewmate.png" alt="Teal crewmate with a caution sign on head" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+                <div class="gameCard" data-image="tealCrewmate">
+                    <img class="cardFront" src="./assets/img/tealCrewmate.png" alt="Teal crewmate with a caution sign on head" />
+                    <img class="cardBack" src="./assets/img/backCard (2).png" alt="Multiple crewmates hanging out on a sofa" />
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+
+    <!-- Restart game button -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-3 restart">
+                <button type="button">Restart</button>
+            </div>
+        </div>
+    </div>
+
+<!-- Links to socials and the amoong us game home page -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col">FACEBOOK <br> <i class="fab fa-facebook-f"></i></div>
+                <div class="col">TWITTER <br> <i class="fab fa-twitter"></i></div>
+                <div class="col">YOUTUBE <br> <i class="fab fa-youtube"></i></div>
+                <div class="col">TWITCH <br> <i class="fab fa-twitch"></i></div>
+                <div class="col">PLAY AMONG US NOW <br> <i class="fab fa-steam"></i></div>
+            </div>
+        </div>
+    </footer>
+
+    
 
 <script src="assets/js/script.js"></script>
 </body>
