@@ -7,6 +7,7 @@ let firstCard, secondCard;
 
 function flipCard () {
     if (lockCardFlips) return;
+    if(this === firstCard) return;
 
     this.classList.add('flip');
 
@@ -35,6 +36,8 @@ function cardMatch() {
 function stopCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+
+    resetGame();
 }
 
 function resetCards() {
@@ -44,9 +47,21 @@ function resetCards() {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
 
-        lockCardFlips = false;
+        resetGame();
         }, 1500);
     }
 }
+
+function resetGame() {
+    [flippedCard, lockCardFlips] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+(function shuffleCards() {
+    card.forEach(card => {
+        let cardPosition = Math.floor(Math.random() *16);
+        card.style.order = cardPosition;
+    });
+}());
 
 card.forEach(card => card.addEventListener('click', flipCard));
