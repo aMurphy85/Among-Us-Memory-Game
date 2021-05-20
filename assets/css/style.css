@@ -42,15 +42,15 @@ body {
 }
 
 .gameArea {    
-    margin: auto;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
 }
 
 .gameCard {
-    width: 145px;
-    height: 150px;
+    height: 205px;
+    width: 195px;
     margin: 5px;
     position: relative;
     transform: scale(1);
@@ -69,7 +69,7 @@ body {
 
 .cardFront,
 .cardBack {
-    border: 5px solid #75FFFF;
+    border: 3px solid #75FFFF;
     border-radius:10px;
     width: 100%;
     height: 100%;
@@ -110,4 +110,71 @@ button:hover {
     background-color: #f8f8ff;
     border: 3px solid #000;
     color: #000;
+}
+
+/* Media queries */
+
+@media (max-width: 992px) {
+    .gameCard {
+        height: 170px;
+        width: 160px;
+    }
+
+}
+
+@media (max-width: 862px) {
+    .gameCard {
+        height: 160px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 672px) {
+    .gameCard {
+        height: 120px;
+        width: 110px;
+    }
+}
+
+
+@media (max-width: 562px) {
+    .gameCard {
+        height: 100px;
+        width: 90px;
+        margin: 3px;
+    }
+    .results {
+        width: 120px;
+    }
+    .restart {
+        width: 120px;
+    }
+}
+
+@media (max-width: 414px) {
+    .gameCard {
+        height: 90px;
+        width: 80px;
+        margin: 3px;
+    }
+    .results {
+        width: 120px;
+    }
+    .restart {
+        width: 120px;
+    }
+}
+
+@media (max-width: 375px) {
+    .gameCard {
+        height: 90px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 320px) {
+    .gameCard {
+        height: 80px;
+        width: 70px;
+    }
 }
