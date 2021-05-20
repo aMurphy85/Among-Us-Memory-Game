@@ -10,6 +10,10 @@ body {
   background: #FFDE2A;
 }
 
+.row {
+    padding: 15px 0 15px 0;
+}
+
 .header {
     align-content: center;
     border-bottom: 3px dashed #000;
@@ -36,9 +40,15 @@ body {
     border: 3px solid #f8f8ff;
     border-radius: 6px;
     color: #f8f8ff;
+    font-size: 20px;
     margin: 5px;
-    padding: 0;
+    padding: 5px;
     text-align: center;
+    text-transform: uppercase;
+}
+
+#gameArea {
+    padding: 0;
 }
 
 .gameArea {    
@@ -49,8 +59,8 @@ body {
 }
 
 .gameCard {
-    height: 205px;
-    width: 195px;
+    height: 185px;
+    width: 175px;
     margin: 5px;
     position: relative;
     transform: scale(1);
@@ -90,26 +100,112 @@ body {
   transform: rotateY(180deg);
 }
 
-.restart {
-    height: 54px;
-    margin: 5px auto 5px auto;
-    padding: 0;
+#restartBtn {
     text-align: center;
 }
 
-button {
+.restartBtn {
     background-color: #000;
     border: 3px solid #f8f8ff;
     border-radius: 6px;
     color: #f8f8ff;
+    font-size: 20px;
     height: 100%;
-    width: 100%;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-button:hover {
+.restartBtn:hover {
     background-color: #f8f8ff;
     border: 3px solid #000;
     color: #000;
+}
+
+/* bootstrap modal styling */
+
+.modal-header {
+    margin: auto;
+    text-transform: uppercase;
+}
+
+.modal-body {
+    border-bottom: 2px dotted #000;
+    border-top: 2px dotted #000;
+}
+
+.modalBtn {
+    background-color: #000;
+    border: 3px solid #f8f8ff;
+    border-radius: 6px;
+    color: #f8f8ff;
+    font-size: 20px;
+    height: 100%;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modalBtn:hover {
+    background-color: #f8f8ff;
+    border: 3px solid #000;
+    color: #000;
+}
+
+.socials {
+    padding: 30px 0 0 0;
+}
+
+#socials {
+    padding: 0;
+}
+
+.socialLink {
+    height: 100px;
+    text-align: center;
+    color: #fafafa;
+    background-color: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.socialLink p {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.socialLink p {
+    padding-top: 5px;
+}
+
+.socialLink a i {
+    color: #f8f8ff;
+    font-size: 20px;
+    margin: auto;
+    padding: 10px;
+}
+
+#facebookLink:hover {
+    background-color: #3b5998;
+}
+
+#twitterLink:hover {
+    background-color: #1DA1F2;
+}
+
+#youtubeLink:hover {
+    background-color: #c4302b;
+}
+
+#twitchLink:hover {
+    background-color: #6441a5;
+}
+
+#steamLink:hover {
+    background-color: #2a475e;
 }
 
 /* Media queries */
@@ -158,17 +254,30 @@ button:hover {
         margin: 3px;
     }
     .results {
-        width: 120px;
+        font-size: 15px;
     }
-    .restart {
-        width: 120px;
+    .restartBtn {
+        font-size: 15px;
     }
+    .row {
+        padding: 10px;
+    }
+    
 }
 
 @media (max-width: 375px) {
     .gameCard {
         height: 90px;
         width: 80px;
+    }
+    .results {
+        font-size: 15px;
+    }
+    .restartBtn {
+        font-size: 15px;
+    }
+    .row {
+        padding: 10px;
     }
 }
 
@@ -177,4 +286,16 @@ button:hover {
         height: 80px;
         width: 70px;
     }
+    .results {
+        font-size: 15px;
+    }
+    .restartBtn {
+        font-size: 15px;
+    }
+    .row {
+        padding: 10px;
+    }
+    .socialLink p {
+    font-size: 8px;
+}
 }
